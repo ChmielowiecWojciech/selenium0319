@@ -9,10 +9,17 @@ public class Init {
 	
 	public static WebDriver getDriver() {
 				
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\E6420\\Desktop\\workspace\\selenium_cwiczenia\\chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.get("http://newtours.demoaut.com/");
-		return driver;
+		System.setProperty("webdriver.chrome.driver", 
+				"C:\\Users\\E6420\\Desktop\\workspace\\"
+				+ "selenium_cwiczenia\\chromedriver.exe");
+		if(driver == null) {
+			driver = new ChromeDriver();
+			driver.get("http://newtours.demoaut.com/");
+			return driver;
+		}else {
+			return driver;
+		}
+		
 	}
 	
 	public static void log(String msg) {
@@ -20,6 +27,7 @@ public class Init {
 	}
 	public static void close() {
 		driver.close(); 
+		driver = null;
 		
 	}
 	public static void sleep(int seconds) {

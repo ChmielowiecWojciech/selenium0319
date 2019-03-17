@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+@Ignore
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class MenuTest {
 	
@@ -96,12 +97,7 @@ public class MenuTest {
 		
 		
 		Init.sleep(3);
-		
-		//public void radioClick(String xpath) {
-		//	Init.log("klikam w element z xpath: " +xpath);
-			//driver.findElement(By.xpath(xpath)).click();
-		//}
-		
+				
 	}
 	/**
 	 * 
